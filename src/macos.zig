@@ -33,7 +33,7 @@ pub fn build(b: *std.Build, target: std.Target, lib: *std.Build.Step.Compile, bu
     lib.root_module.linkFramework("GameController", .{});
     lib.root_module.linkFramework("CoreBluetooth", .{});
     lib.root_module.linkFramework("UniformTypeIdentifiers", .{});
-    lib.root_module.linkSystemLibrary("iconv", .{});
+    // lib.root_module.linkSystemLibrary("iconv", .{});
 
     // Add the platform specific sources
     const objc_flags = root.flags.* ++ [_][]const u8{"-fobjc-arc"};
